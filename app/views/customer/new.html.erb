@@ -17,7 +17,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 p-b-30">
-                    <form class="leave-comment" method="post" action="/customer/do_login">
+                    <%= form_for @customer, url: {action: "do_login"} do |f| %>
+                    <!-- <form class="leave-comment" method="post" action="/customer/do_login"> -->
 						<h4 class="m-text26 p-b-36 p-t-15">
 							Existing Customer
 						</h4>
@@ -36,7 +37,8 @@
 								Login
 							</button>
 						</div>
-					</form>
+                    <% end %>
+					<!-- </form> -->
 				</div>
 
 				<div class="col-md-6 p-b-30">

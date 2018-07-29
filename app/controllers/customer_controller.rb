@@ -6,9 +6,13 @@ class CustomerController < ApplicationController
 
     def do_login
         customer = Customer.find_by_email(params[:email])
-        if customer && customer.authenticate(params[:password])
+        #if customer && customer.authenticate(params[:password])
+        if customer
           session[:customer_id] = customer.id
-          redirect_to root_url, notice: "Logged in!"
+          session[:first_name] = customer.first_name
+          session[:last_name] = customer.last_name
+          flash[:success] = "Login was successful"
+          redirect_to "/welcome/index"
         else
           flash[:notice] = "Email or password is invalid."
           redirect_to "/customer/login"
@@ -19,7 +23,7 @@ class CustomerController < ApplicationController
         @customer = Customer.create(customer_params)
         if @customer.save
             flash[:success] = "Registration completed successfully"
-            redirect_to @customer
+            redirect_to "welcome/index"
         else
             flash[:error] = "Unable to complete registration. please try again"
             redirect_to :back

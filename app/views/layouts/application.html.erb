@@ -24,7 +24,12 @@
 
 				<div class="topbar-child2">
 					<span class="topbar-email">
-                        <a href="/customer/login">Login</a>
+                        <% if current_user %>
+                          Logged in as <%= current_user.email %>.
+                        <% else %>
+                          <a href="/customer/new">Login</a>
+                        <% end %>
+
 					</span>
 
 
