@@ -23,7 +23,7 @@ class CustomerController < ApplicationController
         @customer = Customer.create(customer_params)
         if @customer.save
             flash[:success] = "Registration completed successfully"
-            redirect_to "welcome/index"
+            redirect_to "/welcome/index"
         else
             flash[:error] = "Unable to complete registration. please try again"
             redirect_to :back
