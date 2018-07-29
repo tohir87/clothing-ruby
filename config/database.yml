@@ -53,4 +53,4 @@ production:
   <<: *default
   database: jws_drupal
   username: jwsuser
-  password: <%= ENV['CLOTHING_DATABASE_PASSWORD'] %>
+  password: jws2018@Pr0d
