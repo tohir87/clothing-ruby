@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
+    root :to => 'welcome#index'
   get 'welcome/about'
   get 'welcome/contact'
   get 'welcome/index'
   get 'customer/new'
   get 'customer/login'
+  get 'customer/logout'
   post 'customer/do_login'
   post 'customer/create'
 

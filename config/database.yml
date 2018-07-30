@@ -15,8 +15,8 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
   password: root
-  host: aussicouncil-production.c9pbg7so34fm.us-west-2.rds.amazonaws.com
-  # socket: /Applications/MAMP/tmp/mysql/mysql.sock
+  host: localhost
+  socket: /Applications/MAMP/tmp/mysql/mysql.sock
   # socket: /Applications/MAMP/tmp/mysql/mysql.sock
 
 development:
@@ -51,6 +51,7 @@ test:
 #
 production:
   <<: *default
+  host: aussicouncil-production.c9pbg7so34fm.us-west-2.rds.amazonaws.com
   database: jws_drupal
   username: jwsuser
   password: jws2018@Pr0d

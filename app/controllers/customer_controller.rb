@@ -22,6 +22,7 @@ class CustomerController < ApplicationController
     def create
         @customer = Customer.create(customer_params)
         if @customer.save
+            CustomerMailer.registration_confirmation(@customer).deliver_now
             flash[:success] = "Registration completed successfully"
             redirect_to "/welcome/index"
         else
@@ -31,8 +32,9 @@ class CustomerController < ApplicationController
     end
 
     #destroy method
-    def destroy
-        Customer.find(params[:id]).destroy
+    def logout
+        session[:customer_id] = nil
+        redirect_to root_url, notice: 'Logged out!'
     end
 
 
