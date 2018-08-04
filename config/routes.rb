@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'welcome/product_details'
   get 'products/jumpsuits'
   get 'products/sunglasses'
+  get 'products/watches'
   get 'products/details'
   get 'products/cart'
   get 'customer/new'
