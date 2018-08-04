@@ -6,7 +6,9 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <script type="text/javascript" src="/vendor/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="/vendor/jquery-3.2.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/vendor/slick/slick.css">
+
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
@@ -53,10 +55,10 @@
 							<li>
 								<a href="#">Shop</a>
 								<ul class="sub_menu">
-									<li><a href="#">Hoodies</a></li>
-									<li><a href="#">Tshirts</a></li>
-									<li><a href="#">Jeans&Chinos</a></li>
-									<li><a href="#">Accessories</a></li>
+									<li><a href="/products/jumpsuits">Jumpsuits</a></li>
+									<li><a href="/products/sunglasses">Sunglasses</a></li>
+									<li><a href="/products/shoes">Shoes</a></li>
+									<li><a href="/products/watches">Watches</a></li>
 								</ul>
 							</li>
 
@@ -542,6 +544,8 @@
 	</script>
 <!--===============================================================================================-->
 	<script type="text/javascript" src="/vendor/slick/slick.min.js"></script>
+	<script type="text/javascript" src="/vendor/slick/slick-custom.js"></script>
+	
 <!--===============================================================================================-->
 	<script type="text/javascript" src="/vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
