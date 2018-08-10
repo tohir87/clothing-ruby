@@ -15,7 +15,7 @@ class CustomerController < ApplicationController
           redirect_to "/welcome/index"
         else
           flash[:notice] = "Email or password is invalid."
-          redirect_to "/customer/login"
+          redirect_to "/customer/new"
         end
     end
 
